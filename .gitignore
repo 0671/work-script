@@ -1,0 +1,40 @@
+# 忽略本地虚拟环境文件
+myenv/
+myenv.old/
+env
+# ignore celery output file
+nohup.out
+cl.log
+# 忽略日志文件
+logs/
+**/*.log
+# ignoew pyc
+**/*.pyc
+__pycache__
+
+.DS_Store
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+**/*.log
+
+tests/**/coverage/
+tests/e2e/reports
+selenium-debug.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.local
+
+package-lock.json
+yarn.lock
+
+# 忽略配置文件
+env.yml
