@@ -1,0 +1,96 @@
+{
+    "id": 0,
+    "name": "防护站点名称",
+    "ports": [
+        {
+            "port": "443",
+            "ssl": true,
+            "http2": false,
+            "sni": true
+        }
+    ],
+    "server_names": [
+        "保护域名"
+    ],
+    "url_paths": [
+        {
+            "op": "pre",
+            "url_path": "/"
+        }
+    ],
+    "ssl_cert": 36,
+    "interface": "",
+    "ip": [],
+    "operation_mode": "Reverse Proxy",
+    "policy_group": 5,
+    "ssl_ciphers": "",
+    "ssl_protocols": [],
+    "session_method": {
+        "param": "",
+        "type": "off"
+    },
+    "create_time": 0,
+    "last_update_time": 0,
+    "is_enabled": false,
+    "backend_config": {
+        "type": "proxy",
+        "servers": [
+            {
+                "host": "业务后端地址",
+                "port": "443",
+                "protocol": "https",
+                "weight": 1,
+                "health_check_status": "UNKNOWN"
+            }
+        ],
+        "load_balance_policy": "Round Robin",
+        "x_forwarded_for_action": "append",
+        "keepalive_config": "default_keepalive_config",
+        "keepalive": "0",
+        "keepalive_timeout": "0",
+        "header_config": []
+    },
+    "detector_ip_source": [
+        "cf-connecting-ip" ,
+        "True-Client-IP" ,
+        "X-Forwarded-For:-1" ,
+        "Socket"
+    ],
+    "policy_rules": [],
+    "access_log": {
+        "is_enabled": true,
+        "log_request_header": false,
+        "log_response_header": false,
+        "log_option": "Drop",
+        "req_body": false,
+        "rsp_body": false
+    },
+    "health_check_status": "HEALTHY",
+    "proxy_ip_list": [],
+    "proxy_ip_groups": [],
+    "remark": "备注信息",
+    "proxy_bind_config": {
+        "enable": false,
+        "proxy_bind_ip_list": [],
+        "hash_select_ip_method": "remote_addr_and_port"
+    },
+    "bot_config": {
+        "is_enabled": false
+    },
+    "dynamic_resolve_upstream_config": {
+        "is_enabled": true,
+        "dynamic_resolve_fallback": "next",
+        "dynamic_resolve_fail_timeout": 10,
+        "resolver_config": {
+            "valid": "30",
+            "resolver_timeout": 30
+        }
+    },
+    "deep_detection_config": {
+        "is_enabled": false
+    },
+    "bot_configs": [],
+    "cookie_security": {
+        "is_enabled": false
+    }
+}
